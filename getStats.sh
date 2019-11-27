@@ -36,14 +36,4 @@ numNonNodeProcesses=$(echo "$numProcesses - $numNodeProcesses" | bc);
 totalCpu=$(echo "$nodeCpu + $cpu" | bc);
 totalMem=$(echo "$nodeMem + $mem" | bc);
 
-echo "Total processes: $numProcesses";
-echo "Total memory: $totalMem";
-echo "Total CPU: $totalCpu";
-echo
-echo "Node processes: $numNodeProcesses";
-echo "Node CPU: $nodeCpu";
-echo "Node memory: $nodeMem";
-echo
-echo "Other processes: $numNonNodeProcesses";
-echo "Other CPU: $cpu";
-echo "Other memory: $mem";
+echo "{ totalCpu: $totalCpu, totalMem: $totalMem, numProcesses: $numProcesses, numNonNodeProcesses: $numNonNodeProcesses, numNodeProcesses: $numNodeProcesses, nodeMemory: $nodeMem, nodeCpu: $nodeCpu, nonNodeMemory: $mem, nonNodeCpu: $cpu}";

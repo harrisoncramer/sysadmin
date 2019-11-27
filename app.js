@@ -12,11 +12,11 @@ cron.schedule('* * * * *', async () => {
     if (err) {
       logger.error("SysAdmin Error: \n", err);
       return;
-    }
+    };
     if (stderr){
         logger.error("SysAdmin Error (STD): \n", stderr);
         return;
-    }
+    };
   
     logger.info(`System update: \n`, stdout);
   
