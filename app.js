@@ -18,7 +18,7 @@ cron.schedule('* * * * *', async () => {
         return;
     };
   
-    logger.info(`System update: \n`, stdout);
+    logger.info(JSON.stringify(stdout));
   
   });
   
